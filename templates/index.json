@@ -209,6 +209,22 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "0e043090-63f9-4362-abd1-bda324a4a208": {
+      "type": "section-slider-products",
+      "blocks": {
+        "95f48c5c-832e-455e-86e1-13c848c2f251": {
+          "type": "product",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "95f48c5c-832e-455e-86e1-13c848c2f251"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -217,6 +233,7 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "0e043090-63f9-4362-abd1-bda324a4a208"
   ]
 }
