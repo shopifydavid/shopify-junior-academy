@@ -27,6 +27,12 @@
             "proposal_product": "intelligent-sports-shoes"
           }
         },
+        "438b4a65-c601-48af-9257-a4b102ee8738": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "sprite-yoga-softy-set"
+          }
+        },
         "cfed40a7-f658-4138-9747-77bfe65a1a3f": {
           "type": "product",
           "settings": {
@@ -39,6 +45,7 @@
         "d67ce060-a2a2-4da1-a27e-69fec26f58a9",
         "f1a25216-9941-4260-a753-a40a7c643db2",
         "371b8062-8bb4-473d-9fcb-df941920f586",
+        "438b4a65-c601-48af-9257-a4b102ee8738",
         "cfed40a7-f658-4138-9747-77bfe65a1a3f"
       ],
       "settings": {
