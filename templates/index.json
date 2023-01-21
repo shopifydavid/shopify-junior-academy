@@ -49,7 +49,59 @@
         "cfed40a7-f658-4138-9747-77bfe65a1a3f"
       ],
       "settings": {
-        "include_margins": true
+        "slider_items": 4
+      }
+    },
+    "6c5472bc-be83-4b7f-a5ed-19de4f297f35": {
+      "type": "section-slider-products",
+      "blocks": {
+        "6b7c261f-fbce-4867-a785-05a050ffef19": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "joggers-for-women"
+          }
+        },
+        "c5f1552c-4d7a-4789-a17e-ead39abd78d2": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "intelligent-sports-shoes"
+          }
+        },
+        "dee1732c-69a1-4e42-aa3e-f5b229fa76da": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "skechers-slip-ins-parson-ralven"
+          }
+        },
+        "f000cbf3-b62b-46d7-85dd-c406cedd706f": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "sport-sneakers-de-running"
+          }
+        },
+        "56ca9a2b-ffdf-4935-ad76-787bcaa4769a": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "sports-shoes-of-high-quality"
+          }
+        },
+        "ac475356-6b99-4dd7-a8c3-4d3558338a89": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "sports-shoes-of-high-quality"
+          }
+        }
+      },
+      "block_order": [
+        "6b7c261f-fbce-4867-a785-05a050ffef19",
+        "c5f1552c-4d7a-4789-a17e-ead39abd78d2",
+        "dee1732c-69a1-4e42-aa3e-f5b229fa76da",
+        "f000cbf3-b62b-46d7-85dd-c406cedd706f",
+        "56ca9a2b-ffdf-4935-ad76-787bcaa4769a",
+        "ac475356-6b99-4dd7-a8c3-4d3558338a89"
+      ],
+      "settings": {
+        "slider_items": 2
       }
     },
     "image_banner": {
@@ -265,6 +317,7 @@
   },
   "order": [
     "0e043090-63f9-4362-abd1-bda324a4a208",
+    "6c5472bc-be83-4b7f-a5ed-19de4f297f35",
     "image_banner",
     "rich_text",
     "featured_collection",
