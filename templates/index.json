@@ -1,5 +1,11 @@
 {
   "sections": {
+    "7a8a6aea-6493-47d9-af71-a910811b1b7b": {
+      "type": "image-get-links",
+      "settings": {
+        "get_image_v_1": "shopify:\/\/shop_images\/soccer-cleats-and-ball.jpg"
+      }
+    },
     "0e043090-63f9-4362-abd1-bda324a4a208": {
       "type": "section-slider-products",
       "blocks": {
@@ -49,7 +55,8 @@
         "cfed40a7-f658-4138-9747-77bfe65a1a3f"
       ],
       "settings": {
-        "slider_items": 4
+        "slider_items": 4,
+        "slider_items_tab": 2
       }
     },
     "6c5472bc-be83-4b7f-a5ed-19de4f297f35": {
@@ -101,7 +108,8 @@
         "ac475356-6b99-4dd7-a8c3-4d3558338a89"
       ],
       "settings": {
-        "slider_items": 2
+        "slider_items": 2,
+        "slider_items_tab": 2
       }
     },
     "image_banner": {
@@ -316,6 +324,7 @@
     }
   },
   "order": [
+    "7a8a6aea-6493-47d9-af71-a910811b1b7b",
     "0e043090-63f9-4362-abd1-bda324a4a208",
     "6c5472bc-be83-4b7f-a5ed-19de4f297f35",
     "image_banner",
