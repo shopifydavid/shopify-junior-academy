@@ -1,5 +1,10 @@
 {
   "sections": {
+    "152e98ec-51d2-4309-8ed5-5df3ee6a9236": {
+      "type": "product-object",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -113,6 +118,7 @@
     },
     "image-with-text": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "image-with-text-0": {
           "type": "heading",
@@ -148,6 +154,7 @@
     },
     "multicolumn": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column-0": {
           "type": "column",
@@ -191,6 +198,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -208,6 +216,7 @@
     }
   },
   "order": [
+    "152e98ec-51d2-4309-8ed5-5df3ee6a9236",
     "main",
     "image-with-text",
     "multicolumn",
