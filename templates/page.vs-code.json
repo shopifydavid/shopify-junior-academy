@@ -9,6 +9,30 @@
     },
     "announcement-bar-1": {
       "type": "announcement-bar",
+      "blocks": {
+        "e715d6c7-65da-4e07-b21c-ed15267c739c": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
+        },
+        "6facecbc-482c-4b79-bead-b8ad590f26ef": {
+          "type": "announcement",
+          "settings": {
+            "text": "VS Code Template",
+            "text_alignment": "center",
+            "color_scheme": "background-1",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "e715d6c7-65da-4e07-b21c-ed15267c739c",
+        "6facecbc-482c-4b79-bead-b8ad590f26ef"
+      ],
       "settings": {
       }
     }
