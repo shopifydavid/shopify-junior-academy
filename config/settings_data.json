@@ -214,8 +214,66 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "rich-text": {
+        "type": "rich-text",
+        "blocks": {
+          "f827eba5-129d-427d-9193-59b7e618bae4": {
+            "type": "heading",
+            "settings": {
+              "heading": "<p>Talk about your brand 3<\/p>",
+              "heading_size": "h1"
+            }
+          },
+          "50385f02-c52c-499a-bf08-4e790fa492e2": {
+            "type": "caption",
+            "settings": {
+              "caption": "Add a tagline 2",
+              "text_style": "caption-with-letter-spacing",
+              "text_size": "medium"
+            }
+          }
+        },
+        "block_order": [
+          "f827eba5-129d-427d-9193-59b7e618bae4",
+          "50385f02-c52c-499a-bf08-4e790fa492e2"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "background-1",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 52
+        }
+      },
+      "rich-text-copy": {
+        "type": "rich-text-copy",
+        "blocks": {
+          "89733b16-5e2c-4a15-bd6a-9c30f81be7ce": {
+            "type": "heading",
+            "settings": {
+              "heading": "<p>Talk about your brand 5<\/p>",
+              "heading_size": "h1"
+            }
+          }
+        },
+        "block_order": [
+          "89733b16-5e2c-4a15-bd6a-9c30f81be7ce"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "background-1",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 52
+        }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
