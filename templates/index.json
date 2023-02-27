@@ -1,8 +1,42 @@
 {
   "sections": {
-    "2a267123-746a-41bc-af50-399da46d3df2": {
+    "e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f": {
       "type": "schema-settings-blocks",
+      "blocks": {
+        "template--17487563260178__e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f-167732412760b981db-0": {
+          "type": "benefit",
+          "settings": {
+            "title": "Free shopping"
+          }
+        },
+        "template--17487563260178__e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f-167732412760b981db-1": {
+          "type": "benefit",
+          "settings": {
+            "title": "Benefit 2"
+          }
+        },
+        "794d4868-5c2c-4ad7-b61b-1a7cc5724e31": {
+          "type": "offer",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-leopard-files.jpg"
+          }
+        },
+        "a5493c8a-a1d6-4fb0-94d5-a7f925819243": {
+          "type": "offer",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/soccer-cleats-and-ball.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--17487563260178__e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f-167732412760b981db-0",
+        "template--17487563260178__e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f-167732412760b981db-1",
+        "794d4868-5c2c-4ad7-b61b-1a7cc5724e31",
+        "a5493c8a-a1d6-4fb0-94d5-a7f925819243"
+      ],
       "settings": {
+        "title": "Benefits",
+        "description": "<p>Our benfit description<\/p>"
       }
     },
     "0e043090-63f9-4362-abd1-bda324a4a208": {
@@ -329,7 +363,7 @@
     }
   },
   "order": [
-    "2a267123-746a-41bc-af50-399da46d3df2",
+    "e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f",
     "0e043090-63f9-4362-abd1-bda324a4a208",
     "6c5472bc-be83-4b7f-a5ed-19de4f297f35",
     "7a8a6aea-6493-47d9-af71-a910811b1b7b",
