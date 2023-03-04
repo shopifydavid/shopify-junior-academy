@@ -29,39 +29,82 @@
       {{ section.settings.description }}
     </div>    
   {% endif %}
-  {% if section.blocks.size > 0 %}
-    <ul>
-    {% comment %} Repiter for blocks {% endcomment %}
-      {% for block in section.blocks %}
-        {% if block.settings.title != blank and block.type == 'benefit' %}
-          <li>
-            {{ block.settings.title }}
-            <ul>
-            {% comment %} Repiter for fields in blocks {% endcomment %}
-              {% for i in (1..6) %}
-                {% assign count_name = 'benefit_' | append: i %}
-                {% assign benefit_title = block.settings[count_name] %}
-                {% comment %}  block.settings['benefit_2'] ( "id": "benefit_2" ){% endcomment %}
-                {% if benefit_title != blank %}
-                  <li>
-                    {{ benefit_title }} - {{ i }}
-                  </li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-          </li>    
-        {% endif %}
-      {% endfor %} 
-    </ul>  
-    <div>
-      {% for block in section.blocks %}
-        {% if block.settings.image != blank and block.type == 'offer' %}
-          <img src="{{ block.settings.image | img_url: 'small' }}" alt="{{ block.settings.image.alt | default: section.settings.title }}" >   
-        {% endif %}
-      {% endfor %} 
-    </div>
-  {% endif %}
-  
+  <div class="schema-settings-blocks__block">
+    {% if section.blocks.size > 0 %}
+      <ul>
+      {% comment %} Repiter for blocks {% endcomment %}
+        {% for block in section.blocks %}
+          {% if block.settings.title != blank and block.type == 'benefit' %}
+            <li>
+              {{ block.settings.title }}
+              <ul>
+              {% comment %} Repiter for fields in blocks {% endcomment %}
+                {% for i in (1..6) %}
+                  {% assign count_name = 'benefit_' | append: i %}
+                  {% assign benefit_title = block.settings[count_name] %}
+                  {% comment %}  block.settings['benefit_2'] ( "id": "benefit_2" ){% endcomment %}
+                  {% if benefit_title != blank %}
+                    <li>
+                      {{ benefit_title }} - {{ i }}
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </li>    
+          {% endif %}
+        {% endfor %} 
+      </ul>  
+      <div>
+        {% for block in section.blocks %}
+          {% if block.settings.image != blank and block.type == 'offer' %}
+            <img src="{{ block.settings.image | img_url: 'small' }}" alt="{{ block.settings.image.alt | default: section.settings.title }}" >   
+          {% endif %}
+        {% endfor %} 
+      </div>
+    {% endif %}
+  </div>
+  <hr>
+  <div class="schema-settings-blocks__block">
+    {% if section.blocks.size > 0 %}
+      <ul>
+        {% for block in section.blocks %}          
+          {% case block.type %}
+            {% when 'benefit' %}
+              <li>{{ block.settings.title }}</li>
+            {% when 'offer' %}
+              {% if block.settings.image != blank %}
+                <li>
+                  <img src="{{ block.settings.image | img_url: 'small' }}" alt="{{ block.settings.image.alt | default: section.settings.title }}" >   
+                </li>
+            {% endif %}
+          {% endcase %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+  <hr>
+  <div class="schema-settings-blocks__block">
+    {% if section.blocks.size > 0 %}
+      <ul>
+        {% for block in section.blocks %}          
+          {% case block.type %}
+            {% when 'benefit' %}
+              <li>{{ block.settings.title }}</li>            
+          {% endcase %}
+        {% endfor %}
+        {% for block in section.blocks %}          
+          {% case block.type %}
+            {% when 'offer' %}
+              {% if block.settings.image != blank %}
+                <li>
+                  <img src="{{ block.settings.image | img_url: 'small' }}" alt="{{ block.settings.image.alt | default: section.settings.title }}" >   
+                </li>
+            {% endif %}
+          {% endcase %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
 </div>
 
 {% comment %} Local section settings schema {% endcomment %}
