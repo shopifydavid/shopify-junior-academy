@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "cfa807f4-5431-4c91-a20a-89a1cb479aa0": {
+      "type": "section-all-input-types",
+      "settings": {
+        "input_text": "Our default text field",
+        "input_textarea": "Our default textarea field. We can use more letters and words than in the default text field",
+        "input_richtext": "<h3>Richtext title<\/h3><p>Default text<br\/><strong>Blod<\/strong> and <em>italic<\/em> text.<br\/>and <a href=\"\/pages\/all-input-types-page\" target=\"_blank\" title=\"All input types page\">link<\/a> text<\/p>",
+        "input_inline_richtext": "my <em>inline<\/em> <strong>text and <\/strong><a href=\"\/products\/football-shoes-for-women\" title=\"Football Shoes for Girls\"><em><strong>link<\/strong><\/em><\/a>",
+        "input_html": "<b style=\"color: red;\">Our html input<\/b>",
+        "input_liquid": "{% if 'true' == '131935' %} True {% else %} False {% endif %}",
+        "input_number": 131935,
+        "input_range": 168,
+        "input_radio": "rgba(0,0,0,0.5)",
+        "input_select": "#fff",
+        "input_checkbox": true,
+        "input_link": "shopify:\/\/collections\/with-sale",
+        "input_menu": "main-menu",
+        "input_color": "#0037ff",
+        "input_bg_color": "#8bff45",
+        "input_background": "linear-gradient(0deg, rgba(229, 82, 82, 1) 2%, rgba(0, 0, 0, 1) 100%)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cfa807f4-5431-4c91-a20a-89a1cb479aa0"
+  ]
+}
