@@ -6,13 +6,25 @@
         "template--17487563260178__e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f-167732412760b981db-0": {
           "type": "benefit",
           "settings": {
-            "title": "Free shopping"
+            "title": "Free shopping",
+            "benefit_1": "benefit text 1",
+            "benefit_2": "benefit text 2",
+            "benefit_3": "benefit text 3",
+            "benefit_4": "benefit text 4",
+            "benefit_5": "",
+            "benefit_6": "benefit text 6"
           }
         },
         "template--17487563260178__e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f-167732412760b981db-1": {
           "type": "benefit",
           "settings": {
-            "title": "Benefit 2"
+            "title": "Benefit 2",
+            "benefit_1": "benefit text 1",
+            "benefit_2": "benefit text 2",
+            "benefit_3": "benefit text 3",
+            "benefit_4": "benefit text 4",
+            "benefit_5": "",
+            "benefit_6": "benefit text 6"
           }
         },
         "794d4868-5c2c-4ad7-b61b-1a7cc5724e31": {
@@ -26,13 +38,26 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/soccer-cleats-and-ball.jpg"
           }
+        },
+        "c3016f5e-5c15-4724-8102-e9e3499efa17": {
+          "type": "benefit",
+          "settings": {
+            "title": "New benefit title",
+            "benefit_1": "benefit text 1",
+            "benefit_2": "benefit text 2",
+            "benefit_3": "benefit text 3",
+            "benefit_4": "benefit text 4",
+            "benefit_5": "",
+            "benefit_6": "benefit text 6"
+          }
         }
       },
       "block_order": [
         "template--17487563260178__e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f-167732412760b981db-0",
         "template--17487563260178__e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f-167732412760b981db-1",
         "794d4868-5c2c-4ad7-b61b-1a7cc5724e31",
-        "a5493c8a-a1d6-4fb0-94d5-a7f925819243"
+        "a5493c8a-a1d6-4fb0-94d5-a7f925819243",
+        "c3016f5e-5c15-4724-8102-e9e3499efa17"
       ],
       "settings": {
         "title": "Benefits",
