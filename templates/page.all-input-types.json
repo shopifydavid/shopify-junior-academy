@@ -9,6 +9,40 @@
     },
     "cfa807f4-5431-4c91-a20a-89a1cb479aa0": {
       "type": "section-all-input-types",
+      "blocks": {
+        "0464cd31-a137-40b2-b913-4b31b543d5e4": {
+          "type": "home_1",
+          "settings": {
+            "menu": "main-menu",
+            "text_color": "#00ffff",
+            "text_color_parent": "#8bff45",
+            "background_color": "#9f2b68"
+          }
+        },
+        "f5b2106a-1662-4906-ac1e-98b4846cb63e": {
+          "type": "home_1",
+          "settings": {
+            "menu": "footer",
+            "text_color": "#121212",
+            "text_color_parent": "#0037ff",
+            "background_color": "#8bff45"
+          }
+        },
+        "b428bca5-6dc2-42e8-a4c1-8d95af276ac8": {
+          "type": "home_1",
+          "settings": {
+            "menu": "main-menu",
+            "text_color": "#00ffff",
+            "text_color_parent": "#9f2b68",
+            "background_color": "#1878b9"
+          }
+        }
+      },
+      "block_order": [
+        "0464cd31-a137-40b2-b913-4b31b543d5e4",
+        "f5b2106a-1662-4906-ac1e-98b4846cb63e",
+        "b428bca5-6dc2-42e8-a4c1-8d95af276ac8"
+      ],
       "settings": {
         "input_text": "Our default text field",
         "input_textarea": "Our default textarea field. We can use more letters and words than in the default text field",
