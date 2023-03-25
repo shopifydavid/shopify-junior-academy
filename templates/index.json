@@ -1,5 +1,56 @@
 {
   "sections": {
+    "833456f2-37b4-44e1-a1bb-921e8a9443e6": {
+      "type": "section-collection-tabs",
+      "blocks": {
+        "468ddb87-ff20-400a-bed2-851592853109": {
+          "type": "calloction_tab",
+          "settings": {
+            "collection": "",
+            "alternative_title": "Empty title"
+          }
+        },
+        "e693c1d6-585c-41e2-b94b-4b37b2503f0b": {
+          "type": "calloction_tab",
+          "settings": {
+            "collection": "frontpage",
+            "alternative_title": "All Collections"
+          }
+        },
+        "93d2c073-0cc6-41ba-acff-7f859b499c34": {
+          "type": "calloction_tab",
+          "settings": {
+            "collection": "without-sale",
+            "alternative_title": "Best sellers"
+          }
+        },
+        "25a4ff6c-89fa-4c3b-a990-9d76e33c070d": {
+          "type": "calloction_tab",
+          "settings": {
+            "collection": "empty-collection",
+            "alternative_title": "Emty"
+          }
+        },
+        "f797ce12-87c0-40bf-825d-b2d2a786dd2b": {
+          "type": "calloction_tab",
+          "settings": {
+            "collection": "with-sale",
+            "alternative_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "468ddb87-ff20-400a-bed2-851592853109",
+        "e693c1d6-585c-41e2-b94b-4b37b2503f0b",
+        "93d2c073-0cc6-41ba-acff-7f859b499c34",
+        "25a4ff6c-89fa-4c3b-a990-9d76e33c070d",
+        "f797ce12-87c0-40bf-825d-b2d2a786dd2b"
+      ],
+      "settings": {
+        "title": "Favorite products",
+        "description": "<p>Chose your dream<\/p>"
+      }
+    },
     "e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f": {
       "type": "schema-settings-blocks",
       "blocks": {
@@ -388,6 +439,7 @@
     }
   },
   "order": [
+    "833456f2-37b4-44e1-a1bb-921e8a9443e6",
     "e72cdd5f-9e2a-4bb4-b139-8c16bc27ad6f",
     "0e043090-63f9-4362-abd1-bda324a4a208",
     "6c5472bc-be83-4b7f-a5ed-19de4f297f35",

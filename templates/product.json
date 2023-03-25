@@ -1,8 +1,13 @@
 {
   "sections": {
+    "5117823a-f0fe-4532-b323-9e4560e40777": {
+      "type": "product-benefits-metafield",
+      "settings": {}
+    },
     "152e98ec-51d2-4309-8ed5-5df3ee6a9236": {
       "type": "product-object",
       "settings": {
+        "collection": ""
       }
     },
     "main": {
@@ -17,13 +22,11 @@
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -33,8 +36,7 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -44,8 +46,7 @@
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
@@ -216,6 +217,7 @@
     }
   },
   "order": [
+    "5117823a-f0fe-4532-b323-9e4560e40777",
     "152e98ec-51d2-4309-8ed5-5df3ee6a9236",
     "main",
     "image-with-text",
