@@ -1,48 +1,36 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "c46e18f6-9a01-4dab-881f-2adf72de4378": {
-      "type": "newsletter",
+    "2b99db46-c1c8-42d1-9627-f97b91969b95": {
+      "type": "content-with-tree-blocks",
       "blocks": {
-        "template--17487563358482__c46e18f6-9a01-4dab-881f-2adf72de4378-167671509582ae11c5-0": {
-          "type": "heading",
+        "04d696b0-1306-4d64-8563-5d42922ab52c": {
+          "type": "Service_1_block",
           "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
+            "title": "Theme Development",
+            "description": "<p>Design and customize website themes using HTML, CSS, and JavaScript.<\/p>",
+            "image": "shopify:\/\/shop_images\/software-developer-on-php-code.jpg"
           }
         },
-        "template--17487563358482__c46e18f6-9a01-4dab-881f-2adf72de4378-167671509582ae11c5-1": {
-          "type": "paragraph",
+        "12a519c4-4b81-46f2-a738-be39fd975320": {
+          "type": "Service_2_block",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+            "title_1": "Digital Marketing",
+            "description_1": "<p>Promote products or services through digital channels for targeted audiences.<\/p>",
+            "image_1": "shopify:\/\/shop_images\/planning-design-being-creative.jpg",
+            "title_2": "UI\/UX Design",
+            "description_2": "<p>Create intuitive and visually appealing interfaces for optimal user experience.<\/p>",
+            "image_2": "shopify:\/\/shop_images\/black-friday-online-store.jpg"
           }
-        },
-        "template--17487563358482__c46e18f6-9a01-4dab-881f-2adf72de4378-167671509582ae11c5-2": {
-          "type": "email_form",
-          "settings": {}
         }
       },
       "block_order": [
-        "template--17487563358482__c46e18f6-9a01-4dab-881f-2adf72de4378-167671509582ae11c5-0",
-        "template--17487563358482__c46e18f6-9a01-4dab-881f-2adf72de4378-167671509582ae11c5-1",
-        "template--17487563358482__c46e18f6-9a01-4dab-881f-2adf72de4378-167671509582ae11c5-2"
+        "04d696b0-1306-4d64-8563-5d42922ab52c",
+        "12a519c4-4b81-46f2-a738-be39fd975320"
       ],
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
+      "settings": {}
     }
   },
   "order": [
-    "main",
-    "c46e18f6-9a01-4dab-881f-2adf72de4378"
+    "2b99db46-c1c8-42d1-9627-f97b91969b95"
   ]
 }
