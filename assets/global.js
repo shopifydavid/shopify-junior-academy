@@ -852,6 +852,17 @@ class VariantSelects extends HTMLElement {
 
         if (price) price.classList.remove('visibility-hidden');
         this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut);
+
+        // Varioant features
+        const featureInformation = html.getElementById(`variant-features-${this.dataset.section}`);
+        const spikeData = featureInformation.querySelector(`#variant-features--data`).getAttribute('data-feature-spike');
+        const spikeBlock = document.querySelector('.variant-feature--spike');
+
+        if (spikeData == 'true') {
+          spikeBlock.style.display = 'block';          
+        } else {
+          spikeBlock.style.display = 'none'; 
+        }
       });
   }
 

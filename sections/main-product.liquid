@@ -57,7 +57,7 @@
         {% endif %}
         aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
         data-desktop-layout="{{ section.settings.gallery_layout }}"
-      >
+      > 
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
           <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
@@ -303,6 +303,13 @@
             </button>
           </slider-component>
         {%- endif -%}
+        <div class="variant-feature--spike"
+          {%- unless product.selected_or_first_available_variant.metafields.feature.spike.value == true -%}
+             style="display:none;"          
+          {%- endunless -%}
+          >
+          The product has a spike
+        </div>
       </media-gallery>
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
@@ -335,6 +342,10 @@
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                  {% assign selected_feature_variant = product.selected_or_first_available_variant %} 
+                  <div id="variant-features-{{ section.id }}" style="display: !important;">      
+                    <div id="variant-features--data" data-feature-spike="{{ selected_feature_variant.metafields.feature.spike.value | default: false }}"></div>
+                  </div>
               </div>
               {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
                 <div class="product__tax caption rte">
