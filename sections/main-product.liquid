@@ -342,10 +342,10 @@
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
-                  {% assign selected_feature_variant = product.selected_or_first_available_variant %} 
-                  <div id="variant-features-{{ section.id }}" style="display: !important;">      
-                    <div id="variant-features--data" data-feature-spike="{{ selected_feature_variant.metafields.feature.spike.value | default: false }}"></div>
-                  </div>
+                {% assign selected_feature_variant = product.selected_or_first_available_variant %} 
+                <div id="variant-features-{{ section.id }}" style="display: !important;">      
+                  <div id="variant-features--data" data-feature-spike="{{ selected_feature_variant.metafields.feature.spike.value | default: false }}"></div>
+                </div>
               </div>
               {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
                 <div class="product__tax caption rte">
@@ -592,7 +592,11 @@
               </noscript>
             {%- when 'buy_buttons' -%}
               <div {{ block.shopify_attributes }}>
-                <product-form class="product-form">
+                <product-form 
+                {% if product.selected_or_first_available_variant.metafields.global.only_in_store.value %}
+                  style="display: none;"
+                {% endif %}
+                class="product-form">
                   <div class="product-form__error-message-wrapper" role="alert" hidden>
                     <svg
                       aria-hidden="true"
@@ -651,7 +655,21 @@
                     </div>
                   {%- endform -%}
                 </product-form>
-
+                <div class="button-group">
+                  <div class="button-in-store">
+                    {% for variant in product.variants %}
+                      {% if variant.metafields.global.only_in_store.value %}
+                        <a href="{{variant.metafields.global.only_in_store.value.url}}" 
+                           id="button-in-store-{{variant.id}}" class="button button-in-store--button"
+                           target="_blank"
+                           {% unless product.selected_or_first_available_variant.id == variant.id %}
+                              style="display: none;"                            
+                           {% endunless %}
+                        >Only in store</a>                        
+                      {% endif %}                    
+                    {% endfor %}
+                  </div>
+                </div>
                 {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
                 {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}

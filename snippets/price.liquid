@@ -92,7 +92,7 @@
   {%- endif -%}
   {% if template.name == 'product' %}
     {% if product.selected_or_first_available_variant.available == false%}
-     {{ product.selected_or_first_available_variant.metafields.shipping.availiable_date.value }}      
+     {{ product.selected_or_first_available_variant.metafields.shipping.availiable_date.value | time_tag: '%B %d', datetime: '%Y-%m-%d' }}      
     {% endif %}
   {% endif %}
 </div>

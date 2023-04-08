@@ -761,6 +761,7 @@ class VariantSelects extends HTMLElement {
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
     this.removeErrorMessage();
+    this.hideButtons();
 
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -771,6 +772,22 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
+    }
+  }
+
+  hideButtons() {
+    const id = this.currentVariant.id;
+    const url = document.querySelector(`#button-in-store-${id}`);
+    const form = document.querySelector(`product-form`);
+    const urlArr = document.querySelectorAll('.button-in-store--button');
+    urlArr.forEach((item) => {
+      item.style.display = 'none'
+    });
+    if (!url) {
+      form.style.display = 'block';
+    } else  {
+      url.style.display = 'inline-flex';
+      form.style.display = 'none';
     }
   }
 
