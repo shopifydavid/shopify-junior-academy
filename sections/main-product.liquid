@@ -493,24 +493,48 @@
                     {{ block.shopify_attributes }}
                   >
                     {%- for option in product.options_with_values -%}
-                      <fieldset class="js product-form__input">
-                        <legend class="form__label">{{ option.name }}</legend>
-                        {%- for value in option.values -%}
-                          <input
-                            type="radio"
-                            id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                            name="{{ option.name }}"
-                            value="{{ value | escape }}"
-                            form="{{ product_form_id }}"
-                            {% if option.selected_value == value %}
-                              checked
-                            {% endif %}
-                          >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                            {{ value }}
-                          </label>
-                        {%- endfor -%}
-                      </fieldset>
+                      {% assign option_name = option.name | handleize %}
+                      {% comment %} Swatch colors {% endcomment %}
+                      {% if option_name == 'color' or option_name == 'colour' or option_name == 'laces-сolor' or option_name == 'laces-сolour' %}
+                        <fieldset class="js product-form__input color-swatch">
+                          <legend class="form__label">{{ option.name }}</legend>
+                          {%- for value in option.values -%}
+                            {% assign option_value = value | handleize %}
+                            <input
+                              type="radio"
+                              id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                              name="{{ option.name }}"
+                              value="{{ value | escape }}"
+                              form="{{ product_form_id }}"
+                              {% if option.selected_value == value %}
+                                checked
+                              {% endif %}
+                            >
+                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="color-swatch__block">                                                                        
+                              {% render 'color-swatches-library', swatch_color: option_value %}                              
+                            </label>
+                          {%- endfor -%}
+                        </fieldset>                           
+                      {% else %}
+                        <fieldset class="js product-form__input">
+                          <legend class="form__label">{{ option.name }}</legend>
+                          {%- for value in option.values -%}
+                            <input
+                              type="radio"
+                              id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                              name="{{ option.name }}"
+                              value="{{ value | escape }}"
+                              form="{{ product_form_id }}"
+                              {% if option.selected_value == value %}
+                                checked
+                              {% endif %}
+                            >
+                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                              {{ value }}
+                            </label>
+                          {%- endfor -%}
+                        </fieldset>
+                      {% endif %}
                     {%- endfor -%}
                     <script type="application/json">
                       {{ product.variants | json }}
