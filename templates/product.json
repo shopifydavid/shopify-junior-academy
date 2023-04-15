@@ -1,15 +1,5 @@
 {
   "sections": {
-    "5117823a-f0fe-4532-b323-9e4560e40777": {
-      "type": "product-benefits-metafield",
-      "settings": {}
-    },
-    "152e98ec-51d2-4309-8ed5-5df3ee6a9236": {
-      "type": "product-object",
-      "settings": {
-        "collection": ""
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -117,6 +107,16 @@
         "padding_bottom": 12
       }
     },
+    "5117823a-f0fe-4532-b323-9e4560e40777": {
+      "type": "product-benefits-metafield",
+      "settings": {}
+    },
+    "152e98ec-51d2-4309-8ed5-5df3ee6a9236": {
+      "type": "product-object",
+      "settings": {
+        "collection": ""
+      }
+    },
     "image-with-text": {
       "type": "image-with-text",
       "disabled": true,
@@ -217,9 +217,9 @@
     }
   },
   "order": [
+    "main",
     "5117823a-f0fe-4532-b323-9e4560e40777",
     "152e98ec-51d2-4309-8ed5-5df3ee6a9236",
-    "main",
     "image-with-text",
     "multicolumn",
     "product-recommendations"
