@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "23455b81-6c84-44e9-b6f1-7abb3365984a": {
+      "type": "section-contact-form-extended",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "23455b81-6c84-44e9-b6f1-7abb3365984a"
+  ]
+}
