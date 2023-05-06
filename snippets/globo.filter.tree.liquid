@@ -38,7 +38,7 @@
         {% endcapture %}
         {% assign selected_html = selected_html | append: selected_item_html %}
       {% endif %}
-        <div data-filter-type="{{filter.attribute | replace: 'option:', ''}}" data-filter-id="{{filter.id}}" class="gf-option-block {{filter.class}}{% if filter.is_collapse %} is-collapsed{% endif %}">
+    {% unless filter.values.size == 1 and filter.values.first.selected != true and filter.values.first.count == pagination.total %}    <div data-filter-type="{{filter.attribute | replace: 'option:', ''}}" data-filter-id="{{filter.id}}" class="gf-option-block {{filter.class}}{% if filter.is_collapse %} is-collapsed{% endif %}">
       <div class="gf-block-title">
         <div class="h3">
           <span>{{filter_label}}</span>
@@ -125,7 +125,7 @@
               {% assign selected_html = selected_html | append: selected_item_html %}
             {% endif %}
             <option {% if value.selected %}selected="selected"{% endif %} value='{{value.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}'>
-                {{value_label}} ({{value.count}})            </option>
+                {{value_label}}             </option>
             {% endfor %}
           </select>
           {% else %}
@@ -158,16 +158,16 @@
                       <a {% if node.selected or node.value == collection_id %} class="checked"{% endif %} onclick="toggleCheckboxFilter({{filter.id}},'{{node.value}}')" title="{{node.label | escape}}">
                         <span class="gf-Checkbox"></span>
                         <span class="gf-label">{{node.label | escape}}</span>
-                        <span class="gf-count">({{node.count}})</span>                      </a>
+                                              </a>
                     {% elsif filter.style == 'Radio' %}
                       <a {% if node.selected or node.value == collection_id %} class="checked"{% endif %} onclick="toggleRadioFilter({{filter.id}},'{{node.value}}')" title="{{node.label | escape}}">
                         <span class="gf-RadioButton"></span>
                         <span class="gf-label">{{node.label | escape}}</span>
-                        <span class="gf-count">({{node.count}})</span>                      </a>
+                                              </a>
                     {% elsif filter.style == 'Collection' %}
                       <a {% if node.selected or node.value == collection_id %} class="checked"{% endif %} onclick="changeCollection('{{node.handle}}')" title="{{node.label | escape}}">
                         <span class="gf-label">{{node.label | escape}}</span>
-                        <span class="gf-count">({{node.count}})</span>                      </a>
+                                              </a>
                     {% endif %}
                     {% if node.children %}<span></span>{% endif %}
                     </div>
@@ -198,16 +198,16 @@
                             <a {% if child.selected or child.value == collection_id %} class="checked"{% endif %} onclick="toggleCheckboxFilter({{filter.id}},'{{child.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}')" title="{{child.label | escape}}">
                               <span class="gf-Checkbox"></span>
                               <span class="gf-label">{{child.label | escape}}</span>
-                              <span class="gf-count">({{child.count}})</span>                            </a>
+                                                          </a>
                           {% elsif filter.style == 'Radio' %}
                             <a {% if child.selected or child.value == collection_id %} class="checked"{% endif %} onclick="toggleRadioFilter({{filter.id}},'{{child.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}')" title="{{child.label | escape}}">
                               <span class="gf-RadioButton"></span>
                               <span class="gf-label">{{child.label | escape}}</span>
-                              <span class="gf-count">({{child.count}})</span>                            </a>
+                                                          </a>
                           {% elsif filter.style == 'Collection' %}
                             <a {% if child.selected or child.value == collection_id %} class="checked"{% endif %} onclick="changeCollection('{{child.handle}}')" title="{{child.label | escape}}">
                               <span class="gf-label">{{child.label | escape}}</span>
-                              <span class="gf-count">({{child.count}})</span>                            </a>
+                                                          </a>
                           {% endif %}
                           {% if child.children %}<span></span>{% endif %}
                           </div>
@@ -238,16 +238,16 @@
                                     <a {% if child2.selected or child2.value == collection_id %} class="checked"{% endif %} onclick="toggleCheckboxFilter({{filter.id}},'{{child2.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}')" title="{{child2.label | escape}}">
                                       <span class="gf-Checkbox"></span>
                                       <span class="gf-label">{{child2.label | escape}}</span>
-                                      <span class="gf-count">({{child2.count}})</span>                                    </a>
+                                                                          </a>
                                   {% elsif filter.style == 'Radio' %}
                                     <a {% if child2.selected or child2.value == collection_id %} class="checked"{% endif %} onclick="toggleRadioFilter({{filter.id}},'{{child2.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}')" title="{{child2.label | escape}}">
                                       <span class="gf-RadioButton"></span>
                                       <span class="gf-label">{{child2.label | escape}}</span>
-                                      <span class="gf-count">({{child2.count}})</span>                                    </a>
+                                                                          </a>
                                   {% elsif filter.style == 'Collection' %}
                                     <a {% if child2.selected or child2.value == collection_id %} class="checked"{% endif %} onclick="changeCollection('{{child2.handle}}')" title="{{child2.label | escape}}">
                                       <span class="gf-label">{{child2.label | escape}}</span>
-                                      <span class="gf-count">({{child2.count}})</span>                                    </a>
+                                                                          </a>
                                   {% endif %}
                                   {% if child2.children %}<span></span>{% endif %}
                                   </div>
@@ -277,16 +277,16 @@
                                             <a {% if child3.selected or child3.value == collection_id %} class="checked"{% endif %} onclick="toggleCheckboxFilter({{filter.id}},'{{child3.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}')" title="{{child3.label | escape}}">
                                               <span class="gf-Checkbox"></span>
                                               <span class="gf-label">{{child3.label | escape}}</span>
-                                              <span class="gf-count">({{child3.count}})</span>                                            </a>
+                                                                                          </a>
                                           {% elsif filter.style == 'Radio' %}
                                             <a {% if child3.selected or child3.value == collection_id %} class="checked"{% endif %} onclick="toggleRadioFilter({{filter.id}},'{{child3.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}')" title="{{child3.label | escape}}">
                                               <span class="gf-RadioButton"></span>
                                               <span class="gf-label">{{child3.label | escape}}</span>
-                                              <span class="gf-count">({{child3.count}})</span>                                            </a>
+                                                                                          </a>
                                           {% elsif filter.style == 'Collection' %}
                                             <a {% if child3.selected or child3.value == collection_id %} class="checked"{% endif %} onclick="changeCollection('{{child3.handle}}')" title="{{child3.label | escape}}">
                                               <span class="gf-label">{{child3.label | escape}}</span>
-                                              <span class="gf-count">({{child3.count}})</span>                                            </a>
+                                                                                          </a>
                                           {% endif %}
                                         </li>
                                       {% endfor %}
@@ -334,16 +334,16 @@
                     <a {% if value.selected or value.value == collection_id %} class="checked"{% endif %} onclick="toggleCheckboxFilter({{filter.id}},'{{value.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}')" title="{{value.label | escape}}">
                       <span class="gf-Checkbox"></span>
                       <span class="gf-label">{{value.label | escape}}</span>
-                      <span class="gf-count">({{value.count}})</span>                    </a>
+                                          </a>
                   {% elsif filter.style == 'Radio' %}
                     <a {% if value.selected or value.value == collection_id %} class="checked"{% endif %} onclick="toggleRadioFilter({{filter.id}},'{{value.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}')" title="{{value.label | escape}}">
                       <span class="gf-RadioButton"></span>
                       <span class="gf-label">{{value.label | escape}}</span>
-                      <span class="gf-count">({{value.count}})</span>                    </a>
+                                          </a>
                   {% elsif filter.style == 'Collection' %}
                     <a {% if node.selected or value.value == collection_id %} class="checked"{% endif %} onclick="changeCollection('{{value.handle}}')" title="{{value.label | escape}}">
                       <span class="gf-label">{{value.label | escape}}</span>
-                      <span class="gf-count">({{value.count}})</span>                    </a>
+                                          </a>
                   {% endif %}
                   </div>
                 </li>
@@ -399,20 +399,20 @@
                     <a{% if value.selected %} class="checked"{% endif %} onclick="toggleCheckboxFilter({{filter.id}},'{{value.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}')" title="{{value_label}}">
                       <span class="gf-Checkbox"></span>
                       <span class="gf-label">{{value_label}}</span>
-                      <span class="gf-count">({{value.count}})</span>                    </a>
+                                          </a>
                   </li>
                 {% elsif filter.style == 'Radio' %}
                   <li>
                     <a{% if value.selected %} class="checked"{% endif %} onclick="toggleRadioFilter({{filter.id}},'{{value.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}')" title="{{value_label}}">
                       <span class="gf-RadioButton"></span>
                       <span class="gf-label">{{value_label}}</span>
-                      <span class="gf-count">({{value.count}})</span>                    </a>
+                                          </a>
                   </li>
                 {% elsif filter.style contains 'Box - Rectangle' %}
                   <li class="gf-box-rectangle">
                     <a{% if value.selected %} class="checked"{% endif %} onclick="toggleCheckboxFilter({{filter.id}},'{{value.value | replace:"\\", "\\\\" | replace:"\'", "\\\'" | escape}}')" title="{{value_label}}">
                       <span class="gf-label">{{value_label}}</span>
-                      <span class="gf-count">({{value.count}})</span>                    </a>
+                                          </a>
                   </li>
                 {% elsif filter.style == 'Rating' %}
                   <li>
@@ -426,7 +426,7 @@
                           {% endif %}
                         {% endfor %}
                       </span>
-                      <span class="gf-count">({{value.count}})</span>                    </a>
+                                          </a>
                   </li>
                 {% elsif filter.style contains 'Swatch' %}
                   {% assign attribute = filter.attribute | replace: 'option:', '' | downcase %}
@@ -489,7 +489,7 @@
         </div>
       </div>
     </div>
-        {% endfor %}
+    {% endunless %}    {% endfor %}
   {% endif %}
 {% endcapture %}
 <div class="globo-selected-items-wrapper">

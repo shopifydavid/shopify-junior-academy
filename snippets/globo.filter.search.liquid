@@ -129,7 +129,11 @@
                                                 {% if product.vendor %}
                         <div class="gf-search-item-product-vendor">{{product.vendor | escape}}</div>
                         {% endif %}
-                                                                                                <div class="gl-card-flex"></div>
+                                                                        {% if product.product_type %}
+                        <div class="gf-search-item-product-vendor">{{product.product_type | escape}}</div>
+                        {% endif %}
+                                                                        <div class="gf-search-item-product-vendor">{{product.first_available_variant.sku}}</div>
+                                                <div class="gl-card-flex"></div>
                                                 <div class="gl-card-pricing">
                           <span class="gl-card-price">
                             {{ product.price | money}}
@@ -170,7 +174,11 @@
                                                 {% if product.vendor %}
                         <div class="gf-search-item-product-vendor">{{product.vendor | escape}}</div>
                         {% endif %}
-                                                                                                <div class="gl-card-flex"></div>
+                                                                        {% if product.product_type %}
+                        <div class="gf-search-item-product-vendor">{{product.product_type | escape}}</div>
+                        {% endif %}
+                                                                        <div class="gf-search-item-product-vendor">{{product.first_available_variant.sku}}</div>
+                                                <div class="gl-card-flex"></div>
                                                 <div class="gl-card-pricing">
                           <span class="gl-card-price">
                             {{ product.price | money}}
@@ -248,7 +256,11 @@
                                 {% if product.vendor %}
                 <div class="gf-search-item-product-vendor">{{product.vendor | escape}}</div>
                 {% endif %}
-                                                                                <div class="gf-search-item-product-price">
+                                                {% if product.product_type %}
+                <div class="gf-search-item-product-vendor">{{product.product_type | escape}}</div>
+                {% endif %}
+                                                <div class="gf-search-item-product-vendor">{{product.first_available_variant.sku}}</div>
+                                                <div class="gf-search-item-product-price">
                   <span class="gf-search-item-product">{{ product.price | money}}</span>
                 </div>
                               </div>
@@ -350,7 +362,11 @@
                                                     {% if product.vendor %}
                           <div class="gf-search-item-product-vendor">{{product.vendor | escape}}</div>
                           {% endif %}
-                                                                                                        <div class="gl-card-flex"></div>
+                                                                              {% if product.product_type %}
+                          <div class="gf-search-item-product-vendor">{{product.product_type | escape}}</div>
+                          {% endif %}
+                                                                              <div class="gf-search-item-product-vendor">{{product.first_available_variant.sku}}</div>
+                                                    <div class="gl-card-flex"></div>
                                                     <div class="gl-card-pricing">
                             <span class="gl-card-price">
                               {{ product.price | money}}
@@ -391,7 +407,11 @@
                                                     {% if product.vendor %}
                           <div class="gf-search-item-product-vendor">{{product.vendor | escape}}</div>
                           {% endif %}
-                                                                                                        <div class="gl-card-flex"></div>
+                                                                              {% if product.product_type %}
+                          <div class="gf-search-item-product-vendor">{{product.product_type | escape}}</div>
+                          {% endif %}
+                                                                              <div class="gf-search-item-product-vendor">{{product.first_available_variant.sku}}</div>
+                                                    <div class="gl-card-flex"></div>
                                                     <div class="gl-card-pricing">
                             <span class="gl-card-price">
                               {{ product.price | money}}

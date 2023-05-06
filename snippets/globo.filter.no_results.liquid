@@ -7,5 +7,11 @@
     No products found
   {% endif %}
 </div>
+{% if recommend_products %}
+  <div class="spf-col-xl-12 spf-col-lg-12 spf-col-md-12 spf-col-sm-12"><h3 class="spf-heading">{{translation.search.no_result_products_suggestions_title | default: "Recommended products"}}</h3></div>
+        {% for product in recommend_products %}
+        {% render 'product-grid-item' %}
+      {% endfor %}
+  {% endif %}
 
 {% endraw %}
