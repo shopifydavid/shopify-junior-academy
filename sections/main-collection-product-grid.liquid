@@ -38,14 +38,17 @@
             </h2>
             <div class="select">
               {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-              {% comment %} <select name="sort_by" class="facet-filters__sort select__select caption-large" id="SortBy" aria-describedby="a11y-refresh-page-message">
+              <select name="sort_by" class="facet-filters__sort select__select caption-large" id="SortBy" aria-describedby="a11y-refresh-page-message">
                 {%- for option in collection.sort_options -%}
-                  <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
+                  {% assign option_value_escape = option.value | escape %}
+                  {% unless option_value_escape == 'created-ascending' or option_value_escape == 'created-descending' %}
+                    <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
+                  {% endunless %}                  
                 {%- endfor -%}
-              </select> {% endcomment %}
+              </select> 
 
               {% comment %} NOT RECOMMENDED {% endcomment %}
-              
+              {% comment %} 
                 <select name="sort_by" class="facet-filters__sort select__select caption-large" id="SortBy" aria-describedby="a11y-refresh-page-message">
                   <option value="featured">Featured</option>
                   <option value="price-ascending">Price: Low to High</option>
@@ -59,7 +62,7 @@
                   <option value="random">Random</option>
                   <option value="default">Default</option>
                 </select> 
-              
+              {% endcomment %}
               {% render 'icon-caret' %}
             </div>
           </div>
