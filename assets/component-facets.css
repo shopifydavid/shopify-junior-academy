@@ -1110,3 +1110,9 @@ input.mobile-facets__checkbox {
     padding: 0 1rem 1rem;
   }
 }
+
+/* Customize filter */
+/* Delete A-Z, Z-A options */
+select.facet-filters__sort option[value="title-ascending"],  select.facet-filters__sort option[value="title-descending"] {
+  display: none;
+}
